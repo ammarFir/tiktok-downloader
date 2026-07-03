@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TikTokController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [TikTokController::class, 'index'])->name('home');
+Route::post('/download', [TikTokController::class, 'process'])->name('download.process');
