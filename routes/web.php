@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [TikTokController::class, 'index'])->name('home');
 Route::post('/download', [TikTokController::class, 'process'])->name('download.process');
+Route::get('/download/stream', [TikTokController::class, 'stream'])->name('download.stream');

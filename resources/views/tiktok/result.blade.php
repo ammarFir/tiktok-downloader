@@ -28,7 +28,7 @@
                         {{ Str::limit($description, 100) }}
                     </p>
 
-                    <a href="{{ $videoUrl }}" download
+                    <a href="{{ route('download.stream', ['url' => urlencode($videoUrl)]) }}" download
                         class="block w-full bg-purple-600 text-white font-bold py-3 rounded-xl hover:bg-purple-700 transition text-center">
                         ⬇️ Download Video (No Watermark)
                     </a>
